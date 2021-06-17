@@ -2,6 +2,7 @@
 import csv
 from random import choice, randint
 from string import ascii_lowercase, digits
+from datetime import datetime
 
 def generateString(min=4, max=30):
   letters = ascii_lowercase
@@ -39,7 +40,7 @@ def generateCSVFile():
       generateString().upper()
     ])
 
-  filename = 'output.csv';
+  filename = f"output_{datetime.now().strftime('%Y-%m-%d-%H:%M')}.csv";
 
   with open(filename, 'w') as file:
     writer = csv.writer(file, quoting=csv.QUOTE_ALL)
