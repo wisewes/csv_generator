@@ -62,6 +62,7 @@ def generateCSVFile(filename, row_count):
 @click.command()
 @click.option('--filename', type=click.STRING, prompt='Enter filename', help='The generated filename for csv file')
 @click.option('--rows', type=click.INT, prompt='Enter number of rows', help='The number of rows to create')
+# @click.option('--headers', help="List of header value comma separated, 'firstname', 'lastname', 'age'")
 def main(filename, rows):
     """Creates a CSV file with randomly-generated values for testing and manipulation of test data. Essentially, a generate file as a fake data source."""
     generateCSVFile(filename, rows)
