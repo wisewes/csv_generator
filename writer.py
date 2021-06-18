@@ -1,4 +1,8 @@
 # writer.py
+"""
+Creates a CSV file for testing uploading of dummy data
+"""
+
 import csv
 from random import choice, randint
 from string import ascii_lowercase, digits
